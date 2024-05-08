@@ -19,6 +19,9 @@ public class EjemploJdbc {
             Repositorio<Producto> repositorio = new ProductoRepositoryImpl();
             repositorio.findAll().forEach(p -> System.out.println(p.getNombre()));
 
+
+            System.out.println(repositorio.findById(2));
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
